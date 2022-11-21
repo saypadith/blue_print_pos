@@ -178,7 +178,7 @@ class BluePrintPos {
   }
 
   Future<void> printBarcode(
-    List<int> data, {
+    List<dynamic> data, {
     int size = 120,
     int feedCount = 0,
     bool useCut = false,
@@ -186,8 +186,8 @@ class BluePrintPos {
     List<int> bytes = [];
     final CapabilityProfile profile = await CapabilityProfile.load();
     final Generator generator = Generator(PaperSize.mm58, profile);
-    final List<int> barData = data;
-    bytes += generator.barcode(Barcode.codabar(barData));
+    // final List<int> barData = data;
+    bytes += generator.barcode(Barcode.code128(data));
     // final List<int> byteBuffer = await _getQRImage(data, size.toDouble());
 
     _printProcess(bytes);
