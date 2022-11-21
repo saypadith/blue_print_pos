@@ -25,7 +25,6 @@ class CollectionStyle {
           }
           
           .container {
-              padding: 2px 12px;
           }
           
           hr {
