@@ -15,7 +15,7 @@ class CollectionStyle {
           body {
               background: #eee;
               width: 345px;
-              font-size: 1.8em
+              font-size: 1.5em
           }
           
           .receipt {
@@ -70,19 +70,19 @@ class CollectionStyle {
           }
           
           .text-extra-large {
-              font-size: 2.2em;
+              font-size: 2.0em;
           }
           
           .text-large {
-              font-size: 1.6em;
+              font-size: 1.5em;
           }
           
           .text-medium {
-              font-size: 1.2em;
+              font-size: 1.1em;
           }
           
           .text-small {
-              font-size: 0.8em;
+              font-size: 0.7em;
           }
       </style>
     ''';
