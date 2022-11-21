@@ -28,7 +28,7 @@ class CollectionStyle {
           }
           
           hr {
-              border-top: 2px dashed black;
+              border-top: 3px dashed black;
           }
           
           .text-center {
