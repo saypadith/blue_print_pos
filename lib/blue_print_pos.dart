@@ -187,7 +187,7 @@ class BluePrintPos {
     final CapabilityProfile profile = await CapabilityProfile.load();
     final Generator generator = Generator(PaperSize.mm58, profile);
     final List<int> barData = data;
-    bytes += generator.barcode(Barcode.code39(barData));
+    bytes += generator.barcode(Barcode.itf(barData));
     // final List<int> byteBuffer = await _getQRImage(data, size.toDouble());
 
     _printProcess(bytes);
