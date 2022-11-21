@@ -14,18 +14,18 @@ class CollectionStyle {
           
           body {
               background: #eee;
-              width: 320px;
+              width: 460px;
               font-size: 1.8em
           }
           
           .receipt {
-              width: 320px;
+              width: 450px;
               margin: auto;
               background: white;
           }
           
           .container {
-              padding: 5px 15px;
+              padding: 2px 12px;
           }
           
           hr {
