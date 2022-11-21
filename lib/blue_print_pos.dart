@@ -187,7 +187,7 @@ class BluePrintPos {
     final CapabilityProfile profile = await CapabilityProfile.load();
     final Generator generator = Generator(PaperSize.mm58, profile);
 
-    bytes += generator.barcode(Barcode.codabar(data));
+    bytes += generator.barcode(Barcode.code128(data));
     if (feedCount > 0) {
       bytes += generator.feed(feedCount);
     }
