@@ -76,7 +76,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "960de007a38738d7d5894c9b043603d4656cc1ea"
+      resolved-ref: "3bea394d38fa09dbc5b67ca48c050b5a59abc914"
       url: "https://github.com/saypadith/esc_pos_utils_wayha.git"
     source: git
     version: "1.1.0"
