@@ -14,21 +14,22 @@ class CollectionStyle {
           
           body {
               background: #eee;
-              width: 330px;
+              width: 300px;
               font-size: 1.8em
           }
           
           .receipt {
-              width: 330px;
+              width: 300px;
               margin: auto;
               background: white;
           }
           
           .container {
+              padding: 0px;
           }
           
           hr {
-              border-top: 3px dashed black;
+              border-top: 2px dashed black;
           }
           
           .text-center {
