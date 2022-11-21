@@ -30,6 +30,7 @@ class CollectionStyle {
           
           hr {
               border-top: 2px solid black;
+              margin: 0px;
           }
           
           .text-center {
