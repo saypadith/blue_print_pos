@@ -177,6 +177,26 @@ class BluePrintPos {
     );
   }
 
+  Future<void> printBarcode(
+    List<int> data, {
+    int size = 120,
+    int feedCount = 0,
+    bool useCut = false,
+  }) async {
+    List<int> bytes = [];
+    final CapabilityProfile profile = await CapabilityProfile.load();
+    final generator = Generator(PaperSize.mm58, profile);
+    final List<int> barData = data;
+    bytes += generator.barcode(Barcode.upcA(barData));
+    // final List<int> byteBuffer = await _getQRImage(data, size.toDouble());
+    printReceiptImage(
+      bytes,
+      width: size,
+      feedCount: feedCount,
+      useCut: useCut,
+    );
+  }
+
   /// Reusable method for print text, image or QR based value [byteBuffer]
   /// Handler Android or iOS will use method writeBytes from ByteBuffer
   /// But in iOS more complex handler using service and characteristic
