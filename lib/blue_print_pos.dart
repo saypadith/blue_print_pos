@@ -179,7 +179,7 @@ class BluePrintPos {
   }
 
   Future<void> printBarcode(
-    List<int> data, {
+    List<dynamic> data, {
     int size = 120,
     int feedCount = 0,
     bool useCut = false,
