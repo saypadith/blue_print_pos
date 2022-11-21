@@ -83,7 +83,7 @@ class CollectionStyle {
           }
           
           .text-small {
-              font-size: 0.88em;
+              font-size: 0.92em;
           }
       </style>
     ''';
