@@ -186,19 +186,12 @@ class BluePrintPos {
     List<int> bytes = [];
     final CapabilityProfile profile = await CapabilityProfile.load();
     final Generator generator = Generator(PaperSize.mm58, profile);
-    // final List<int> barData = data;
-    bytes += generator.barcode(Barcode.codabar(data));
-    // final List<int> byteBuffer = await _getQRImage(data, size.toDouble());
+
+    bytes += generator.barcode(Barcode.code128(data));
     if (feedCount > 0) {
       bytes += generator.feed(feedCount);
     }
     _printProcess(bytes);
-    // printReceiptImage(
-    //   bytes,
-    //   width: size,
-    //   feedCount: feedCount,
-    //   useCut: useCut,
-    // );
   }
 
   /// Reusable method for print text, image or QR based value [byteBuffer]
