@@ -189,7 +189,9 @@ class BluePrintPos {
     // final List<int> barData = data;
     bytes += generator.barcode(Barcode.codabar(data));
     // final List<int> byteBuffer = await _getQRImage(data, size.toDouble());
-
+    if (feedCount > 0) {
+      bytes += generator.feed(feedCount);
+    }
     _printProcess(bytes);
     // printReceiptImage(
     //   bytes,
