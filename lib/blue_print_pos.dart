@@ -120,7 +120,7 @@ class BluePrintPos {
     bool useCut = false,
     bool useRaster = false,
     double duration = 0,
-    PaperSize paperSize = PaperSize.mm58,
+    PaperSize paperSize = PaperSize.mm80,
   }) async {
     final Uint8List bytes = await contentToImage(
       content: receiptSectionText.content,
@@ -146,7 +146,7 @@ class BluePrintPos {
     int feedCount = 0,
     bool useCut = false,
     bool useRaster = false,
-    PaperSize paperSize = PaperSize.mm58,
+    PaperSize paperSize = PaperSize.mm80,
   }) async {
     final List<int> byteBuffer = await _getBytes(
       bytes,
@@ -186,7 +186,7 @@ class BluePrintPos {
   }) async {
     List<int> bytes = [];
     final CapabilityProfile profile = await CapabilityProfile.load();
-    final Generator generator = Generator(PaperSize.mm58, profile);
+    final Generator generator = Generator(PaperSize.mm80, profile);
     // final bct.Barcode barcode = bct.Barcode.code128(data);
     bytes += generator.barcode(Barcode.code128(data));
     if (feedCount > 0) {
@@ -236,7 +236,7 @@ class BluePrintPos {
   /// [useCut] to cut of receipt layout as byte buffer.
   Future<List<int>> _getBytes(
     List<int> data, {
-    PaperSize paperSize = PaperSize.mm58,
+    PaperSize paperSize = PaperSize.mm80,
     int customWidth = 0,
     int feedCount = 0,
     bool useCut = false,
