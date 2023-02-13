@@ -14,12 +14,12 @@ class CollectionStyle {
           
           body {
               background: #eee;
-              width: 200px;
+              width: 300px;
               font-size: 1.5em
           }
           
           .receipt {
-              width: 200px;
+              width: 300px;
               margin: 0;
               background: white;
           }
